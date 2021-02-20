@@ -26,6 +26,7 @@ const switcher = {
   switcherID: null,
   isActive: false,
   startSwitchHendler() {
+    startBynRef.setAttribute('disabled', 'disabled');
     if (this.isActive) {
       return;
     }
@@ -40,6 +41,7 @@ const switcher = {
   stoptSwitchHendler() {
     clearInterval(this.switcherID);
     this.isActive = false;
+    startBynRef.removeAttribute('disabled');
   },
 };
 
